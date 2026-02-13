@@ -15,10 +15,12 @@
                 <div class="header-logo">
                     <img src="BasaltOS.png" alt="BasaltOS Logo"/>
                 </div>
-                <nav class="header-navigation">
+                <nav class="header-navigation" id="nav-menu">
                     <a href="index.html">Home</a>
                     <a href="team.html">Team</a>
-                    <button>Menu</button>
+                    <button id="menu-toggle" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
                 </nav>
             </div>
         </header>
@@ -105,8 +107,21 @@
             </div>
             <footer>
                 <p>Copyright © 2026 BasaltOS | Developed by Peyton (penne-not-pasta) | Special thanks to the community. | <a href="https://github.com/BasaltOS-org">GitHub</a> | <a href="https://discord.gg/NfvQcpaH3U">Discord</a> | <a href="mailto:devteam@basaltos.tech">Email</a> </p>
-                
             </footer>
         </main>
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                const nav = document.getElementById('nav-menu');
+                nav.classList.toggle('mobile-active');
+                
+                // Toggle icon between 'hamburger' and 'X'
+                const icon = this.querySelector('i');
+                if (nav.classList.contains('mobile-active')) {
+                    icon.className = 'bi bi-x-lg';
+                } else {
+                    icon.className = 'bi bi-list';
+                }
+            });
+        </script>
     </body>
 </html>

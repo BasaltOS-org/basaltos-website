@@ -78,8 +78,8 @@ body {
 }
 
 .header-navigation a {
-	display: none;
-	font-size: 1.125rem;
+    display: block;
+    font-size: 1.125rem;
 	color: inherit;
 	text-decoration: none;
 }
@@ -148,14 +148,8 @@ body {
 	font-weight: 700;
 }
 
-@media (min-width: 800px) {
-	.header-navigation a {
-		display: inline-block;
-	}
-
-	.header-navigation button {
-		display: none;
-	}
+.widget .mobile-active {
+	display: none;
 }
 
 footer {
@@ -294,4 +288,78 @@ footer a:hover {
     font-size: 0.9rem;
     color: #777;
     font-style: italic;
+}
+
+/* Styling for the icon itself */
+#menu-toggle i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+/* --- NAVIGATION --- */
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation a {
+    /* (Your existing link styles) */
+    font-size: 1.125rem;
+    color: inherit;
+    margin-left: 1.75rem;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    display: block; /* Ensure links are visible on desktop */
+}
+
+.header-navigation button {
+    display: none; /* THIS LINE HIDES THE MENU BUTTON ON LARGE SCREENS */
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 1.75rem;
+}
+
+/* --- MOBILE STYLES (Under 800px) --- */
+@media (max-width: 799px) {
+    .header-navigation button {
+        display: block; /* THIS SHOWS IT ONLY ON MOBILE */
+    }
+    
+    .header-navigation a {
+        display: none; /* Hides individual links on mobile until toggled */
+    }
+    
+    /* Mobile Menu Fix */
+    @media (max-width: 799px) {
+        /* 1. Hide the links by default on mobile */
+        .header-navigation a {
+            display: none;
+        }
+    
+        /* 2. When 'mobile-active' is added, show the links and stack them */
+        .header-navigation.mobile-active {
+            position: absolute;
+            top: var(--header-inner-height);
+            right: 0;
+            width: 100%;
+            background-color: #fff;
+            display: flex !important;
+            flex-direction: column;
+            padding: 1rem;
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+    
+        /* 3. Force the links to be visible when the menu is active */
+        .header-navigation.mobile-active a {
+            display: block !important;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            color: #333;
+        }
+    }
 }
