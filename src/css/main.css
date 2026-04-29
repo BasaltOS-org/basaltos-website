@@ -1,0 +1,147 @@
+@font-face {
+    src: url("../fonts/jbm/JetBrainsMono-Bold.ttf");
+    font-family: "JetbrainsMonoBold"
+}
+
+@font-face {
+    src: url("../fonts/jbm/JetBrainsMono-SemiBold.ttf");
+    font-family: "JetbrainsMonoSemiBold"
+}
+
+@font-face {
+    src: url("../fonts/jbm/JetBrainsMono-Regular.ttf");
+    font-family: "JetbrainsMonoRegular"
+}
+
+body {
+    background-color: #1c1c1c;
+    font-family: "JetbrainsMonoRegular", monospace;
+    color: white;
+    user-select: none;
+}
+
+:root {
+    --c: #fff;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+    > img {
+        min-width: 118px;
+        height: 128px;
+    }
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        > h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+            user-select: text;
+        }
+
+        > p {
+            margin: 0;
+            font-size: 1rem;
+            color: #bbb;
+        }
+    }
+
+    border-bottom: #333 solid 3px;
+    padding-bottom: 0.5em;
+}
+
+section {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5em;
+
+    > h1 {
+        user-select: none;
+        margin-bottom: 0;
+    }
+
+    > ul {
+        padding-inline: 1.5rem;
+
+        > li {
+            padding-left: 0.5rem;
+            user-select: text;
+        }
+
+        > li::marker {
+            content: "—";
+        }
+    }
+
+}
+
+highlight {
+    --c: #e2821b;
+    color: var(--c);
+    text-shadow: 0 0 5px var(--c);
+    transition: ease-in-out 0.25s;
+    user-select: text;
+}
+
+highlight.blue {
+    --c: #00aeff;
+}
+
+highlight:hover {
+    --c: #ff931f;
+    text-shadow: 0 0 8px var(--c);
+}
+
+highlight:hover.blue {
+    --c: #2abbff;
+    text-shadow: 0 0 8px var(--c);
+}
+
+*::selection {
+    background-color: #fff4;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+bold, h1 {
+    font-family: "JetbrainsMonoBold", monospace;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "JetbrainsMonoSemiBold", monospace;
+    font-weight: bold;
+}
+
+.teamList {
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    > a {
+        color: white;
+    }
+
+    > .member {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+
+        > p {
+            margin: 0;
+        }
+    }
+}
