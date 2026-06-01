@@ -174,7 +174,7 @@ h2 {
     border-radius: 0.25rem;
     background-color: #222;
     border: #444 solid 1px;
-    width: 30rem;
+    width: max-content;
 
     cursor: help;
 }
