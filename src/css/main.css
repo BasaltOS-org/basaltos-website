@@ -105,7 +105,7 @@ footer {
     left: -0.5rem;
 }
 
-highlight {
+.highlight {
     --c: #e2821b;
     color: var(--c);
     text-shadow: 0 0 5px var(--c);
@@ -113,16 +113,16 @@ highlight {
     user-select: text;
 }
 
-highlight.blue {
+.highlight.blue {
     --c: #00aeff;
 }
 
-highlight:hover {
+.highlight:hover {
     --c: #ff931f;
     text-shadow: 0 0 8px var(--c);
 }
 
-highlight:hover.blue {
+.highlight:hover.blue {
     --c: #2abbff;
     text-shadow: 0 0 8px var(--c);
 }
@@ -136,7 +136,7 @@ a {
     outline: none;
 }
 
-bold, h1 {
+strong, h1 {
     font-family: "JetbrainsMonoBold", monospace;
     font-weight: bold;
 }
