@@ -176,7 +176,7 @@ h2 {
     border: #444 solid 1px;
     width: 30rem;
 
-    cursor: not-allowed;
+    cursor: help;
 }
 
 .spaceeater {
