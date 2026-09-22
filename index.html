@@ -3,76 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BasaltOS</title>
+    <title>BasaltOS Linux</title>
+    <meta name="description" content="BasaltOS is a Linux distribution based on AlmaLinux. It is clean & well-designed according to the people that work on it. No ISO yet. Discord gets the news first.">
+    <meta name="theme-color" content="#131313">
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basaltdev.tech/">
+    <meta property="og:title" content="BasaltOS">
+    <meta property="og:description" content="A Linux distribution based on AlmaLinux, for power users and beginners alike. NVIDIA support out of the box.">
+    <meta property="og:image" content="https://basaltdev.tech/src/img/logoDark.png">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
-    <header>
-        <img src="src/img/logo.png" alt="The BasaltOS Logo">
-        <div>
-            <h1>BasaltOS</h1>
-            <p>A clean, well-designed system for power users and beginners alike.</p>
+    <a class="skip-link" href="#main">skip to content</a>
+
+    <nav aria-label="main">
+        <span class="wordmark">BasaltOS Linux</span>
+        <div class="links">
+            <a href="#pitch">pitch</a>
+            <a href="#roadmap">roadmap</a>
+            <a href="#team">team</a>
+            <a href="#download">download</a>
         </div>
-    </header>
+    </nav>
 
-    <section>
-        <h1>Why choose <span class="highlight">BasaltOS</span>?</h1>
-        <ul>
-            <li>User-friendly desktop experience</li>
-            <li>Powerful system</li>
-            <li>Based on <a href="https://almalinux.org/" target="_blank"><span class="highlight blue">AlmaLinux</span></a> for a stable base</li>
-            <li>Packages and configurations for NVIDIA GPUs</li>
-        </ul>
-    </section>
-
-    <section>
-        <h1>The BasaltOS Team:</h1>
-
-        <section>
-            <h2>Project Leaders</h2>
-            <div class="teamList">
-                <a href="https://github.com/Hiburger" target="_blank"><strong>Gabriel</strong></a>
-                <a href="https://github.com/johndavedosn" target="_blank"><strong>Evil</strong></a>
-                <a href="https://github.com/Forecastwolf157" target="_blank"><strong>Forecastwolf</strong></a>
+    <main id="main">
+        <header class="hero" id="top">
+            <p class="status-line">pre-release.... made by people with more enthusiasm than sense</p>
+            <h1>Basalt<span class="accent">OS</span><span class="cursor" aria-hidden="true">&#9608;</span></h1>
+            <p class="tagline">BasaltOS is AlmaLinux with our taste applied. NVIDIA support out of the box. Zero known bugs so far (there's no codebase yet)</p>
+            <div class="cta">
+                <a class="btn solid" href="https://discord.gg/NfvQcpaH3U" target="_blank" rel="noopener">get on the discord</a>
+                <a class="btn" href="https://github.com/BasaltOS-Org" target="_blank" rel="noopener">github</a>
             </div>
-        </section>
+        </header>
 
-        <section>
-            <h2>Developers</h2>
-            <div class="teamList">
-                <a href="https://pancaakeprotocol.page/" target="_blank"><strong>Pancakeman</strong></a>
-                <a href="https://git.ditherdude.dev/DitherDude" target="_blank"><strong>Dither Dude</strong></a>
-                <a href="https://codeberg.org/Allucat1000" target="_blank"><strong>Allucat1000</strong></a>
-                <strong title="No socials other than Discord">Violet</strong>
-                <a href="https://linktr.ee/pennenotpasta" target="_blank"><strong>Peyton</strong></a>
-                <a href="https://github.com/Cavaire3D" target="_blank"><strong>Cavaire3D</strong></a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Epic Contributors</h2>
-            <div class="teamList">
-                <div class="member">
-                    <a href="https://www.greenova.xyz" target="_blank"><strong>Greenova Mapper</strong></a>
-                    <p>(Hosts our MC server)</p>
+        <section id="pitch" aria-labelledby="pitch-title">
+            <h2 id="pitch-title">The pitch</h2>
+            <div class="rows">
+                <div class="row">
+                    <h3>Beginner-friendly</h3>
+                    <p>We will write why here once we have a reason to call it "beginner friendly". But AlmaLinux isn't that complicated to begin with</p>
+                </div>
+                <div class="row">
+                    <h3>Stable base</h3>
+                    <p>Built on <a class="accent-link" href="https://almalinux.org/" target="_blank" rel="noopener">AlmaLinux</a>, because maintaining our own kernel is how projects become cautionary tales. Boring where it counts, which is exactly what a base should be.</p>
+                </div>
+                <div class="row">
+                    <h3>NVIDIA support</h3>
+                    <p>Packages and configurations for NVIDIA GPUs, sorted at first boot instead of after a forum thread.</p>
+                </div>
+                <div class="row">
+                    <h3>Power-user ready</h3>
+                    <p>Sane defaults out of the box. Tear them apart. We'd do the same.</p>
                 </div>
             </div>
         </section>
-    </section>
 
-    <section>
-        <h1>Downloads</h1>
-        <div role="button" aria-disabled="true" class="download">
-            Sorry!<br>Downloads not available yet, we're working on that!
-        </div>
-    </section>
+        <section id="roadmap" aria-labelledby="roadmap-title">
+            <h2 id="roadmap-title">The plan</h2>
+            <ol class="steps">
+                <li>
+                    <h3>Foundations <span class="tag later">[planned]</span></h3>
+                    <p>Base system on AlmaLinux: packaging, configurations, NVIDIA support. Starting slowly... That's the honest status.</p>
+                </li>
+                <li>
+                    <h3>First ISO <span class="tag later">[planned]</span></h3>
+                    <p>Bootable test images, eventually. The Discord hears first, even if the announcement is a bit sheepish.</p>
+                </li>
+                <li>
+                    <h3>Public release <span class="tag later">[planned]</span></h3>
+                    <p>Stable releases, and this page grows a download button. No dates (dates are how we got into this situation)</p>
+                </li>
+            </ol>
+        </section>
 
-    <div class="spaceeater"></div>
-    
+        <section id="download" aria-labelledby="download-title">
+            <h2 id="download-title">Download</h2>
+            <div class="noiso">
+                <h3>No ISO. Stop asking.</h3>
+                <p>Fair question, actually. There's no ISO because there is, so far, no OS. This page has said "soon" for over a year now. We're aware. Watch the repo, or get pinged below for whenever one of us finally pushes the button.</p>
+                <div class="cta">
+                    <a class="btn solid" href="https://discord.gg/NfvQcpaH3U" target="_blank" rel="noopener">get pinged on discord</a>
+                    <a class="btn" href="https://github.com/BasaltOS-Org" target="_blank" rel="noopener">watch on github</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" aria-labelledby="team-title">
+            <h2 id="team-title">The people responsible</h2>
+            <div class="rows">
+                <div class="row">
+                    <h3>Leaders</h3>
+                    <p><a class="accent-link" href="https://gabriel.olynthe.org" target="_blank" rel="noopener">Gabriel</a>, <a class="accent-link" href="https://github.com/johndavedosn" target="_blank" rel="noopener">Evil</a>, <a class="accent-link" href="https://github.com/Forecastwolf157" target="_blank" rel="noopener">Forecastwolf</a></p>
+                </div>
+                <div class="row">
+                    <h3>Developers</h3>
+                    <p><a class="accent-link" href="https://pancaakeprotocol.page/" target="_blank" rel="noopener">Pancakeman</a>, <a class="accent-link" href="https://git.ditherdude.dev/DitherDude" target="_blank" rel="noopener">Dither Dude</a>, <a class="accent-link" href="https://codeberg.org/Allucat1000" target="_blank" rel="noopener">Allucat1000</a>, <span title="no socials other than discord">Violet</span>, <a class="accent-link" href="https://linktr.ee/pennenotpasta" target="_blank" rel="noopener">Peyton</a>, <a class="accent-link" href="https://github.com/Cavaire3D" target="_blank" rel="noopener">Cavaire3D</a></p>
+                </div>
+                <div class="row">
+                    <h3>Also here</h3>
+                    <p><a class="accent-link" href="https://www.greenova.xyz" target="_blank" rel="noopener">Greenova Mapper</a> (hosts our MC server, currently the most functional BasaltOS service). Legend.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <a href="https://github.com/BasaltOS-Org" target="_blank">See our GitHub</a>
-        <a href="https://discord.gg/NfvQcpaH3U" target="_blank">Our Discord Server!</a>
-        <a href="mailto:devteam@basaltdev.tech" target="_blank">Email us!</a>
+        <p>&copy; 2077 BasaltOS Linux</p>
+        <div class="links">
+            <a href="https://github.com/BasaltOS-Org" target="_blank" rel="noopener">github</a>
+            <a href="https://discord.gg/NfvQcpaH3U" target="_blank" rel="noopener">discord</a>
+            <a href="mailto:devteam@basaltdev.tech">email</a>
+        </div>
     </footer>
 </body>
 </html>
