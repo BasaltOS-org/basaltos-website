@@ -110,7 +110,7 @@ footer {
     width: var(--w);
     margin-inline: auto;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
@@ -119,6 +119,17 @@ footer {
 
 nav {
     padding: 1rem 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: block;
+    flex-shrink: 0;
 }
 
 .wordmark {
